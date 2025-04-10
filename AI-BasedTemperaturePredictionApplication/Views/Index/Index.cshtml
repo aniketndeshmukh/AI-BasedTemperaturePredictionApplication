@@ -1,0 +1,41 @@
+﻿@model List<AI_BasedTemperaturePredictionApplication.Models.CityTemperature>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<div class="container mt-5">
+    <h2 class="text-center">City-Wise Temperature Graph</h2>
+    <canvas id="temperatureChart"></canvas>
+</div>
+<div class="mt-4">
+    <h4>Predict Future Temperature</h4>
+    <input type="number" id="daysInput" class="form-control" placeholder="Enter Days">
+    <button class="btn btn-warning mt-2" onclick="predictTemp()">Predict</button>
+    <h5 id="predictionResult" class="mt-3"></h5>
+</div>
+
+<script>
+
+
+
+    var ctx = document.getElementById('temperatureChart').getContext('2d');
+    var chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: @Html.Raw(Json.Encode(Model.Select(m => m.CityName))),
+            datasets: [{
+                label: 'Temperature (°C)',
+                data: @Html.Raw(Json.Encode(Model.Select(m => m.Temperature))),
+                backgroundColor: 'rgba(54, 162, 235, 0.5)'
+            }]
+        }
+    });
+
+
+
+    function predictTemp() {
+        var days = $("#daysInput").val();
+        $.get('@Url.Action("PredictTemperature", "Index")', { days: days }, function (data) {
+            $("#predictionResult").text("Predicted Temperature: " + data.predictedTemperature + "°C");
+        });
+    }
+</script>

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.35826.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AI-BasedTemperaturePredictionApplication", "AI-BasedTemperaturePredictionApplication\AI-BasedTemperaturePredictionApplication.csproj", "{834E6CF3-9F83-400B-8559-34CC71AB81AF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{834E6CF3-9F83-400B-8559-34CC71AB81AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{834E6CF3-9F83-400B-8559-34CC71AB81AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{834E6CF3-9F83-400B-8559-34CC71AB81AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{834E6CF3-9F83-400B-8559-34CC71AB81AF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {560D7EB0-0793-4423-B0A5-D5C22EA199BB}
+	EndGlobalSection
+EndGlobal
